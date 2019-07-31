@@ -1,0 +1,44 @@
+TEST COVERAGE
+In our code we decide to test on our class. 
+
+IMPORTANT CLASSES
+
+The packages BEAN and DAO are Database. Bean contains new classes which can be stored into the database. The database can do insert, delet, update, and query constructed by the abstract parent class Dao. insert() can add a new information into the database. delete() can delete a chosen information from the database. update() can adjust some parts in the database, and query take the information that we want from the database. 
+
+The overall database is constructed by SQLiteHelper oncreate() method. The database has three tables, User for user information management, SaveFile for auto saving, and Score for highest record of each user in each type of games. 
+
+To be specific, UserDao has three more methods, find(), register(), and login() other than the four override methods. find() will return true if the user has already registered, which means the user is in the database. Then register() will insert() the user if the user is not found. Login() will log the user into the game center by giving out the user's complete information by recognizing the username. 
+
+SaveDao has four more methods, getSerializedObject() and readSerializedObject(), find() and autoSave(), other than the four override methods. find() will return true if the user has historical game, and vice versa. Then autoSave() will use find() to decide whether to insert() the boardmanager or update() it. If the user has historical record, then update(), or insert() a new boardmanager. getSerializedObject() and readSerializedObject() could transfer the boardmanager into byteArray or transfer the byteArray back to the boardmanager. 
+
+ScoreDao has two more methods, find() and upLoadScore(), other than the four override methods. find() can check whether has historical highest finalscore. upLoadSore() uses find() to decide to inser() the finalscore if it is not find() or update() if the finalscore is higher than the historical highest finalscore.
+
+MyApplication is an Application, which is singleton. It acts like a public statistic manager. Every class or Activity can load statistic like the user(User), gameType(String), boardManager(BoardManager), scoreDao(ScoreDao), userAccountManager(UserDao), and savingManager(SaveDAo). As well as every class or activity can set or change the value of those statistics in MyApplication. Additionally, MyApplication provides an access to database. ALthough each class or activity can access the database by calling new classes in DAO, like UserDao, it is more well organized if all classes and activities access the database through a same path. 
+
+The BoardManager super class, which is inheritanced by SlidingTilesBoardManager, SudokuBoardManager and TicTacToeBoardManager. They play a controlling role to control each games Board. They will take all actual methods and functions for the board which will let board be a functional java class. For SlidingTilesBoardManager, it takes the function of checking puzzle solved or not, checking a valid tap or not, setting an undo time number, undo a move, touch a move, getting a tile array and getting a score. For Sudoku BoardManager, it takes the function of getting a sudoku board, checking a valid board or not, checking duplicate number or not and copying the values of input. For TicTacToeBoardManager, it takes the function of getting a TicTacToe Board, checking valid move and changing the win states, getting the current move and changing the player.
+
+The Board super class which extends observable, which is inheritanced by SlidingTilesBoard, SudokuBoard and TicTacToeBoard. In general, they form each board for each game and let the view be useful. For SlidingTilesBoard, we form slidingtile board by a board iterator, through constructing tiles. For SudokuBoard, we form sudoku board by a subclass called fragment. For TicTacToeBoard, we form a tictactoe board by a giving size of board, which is the dimension of each board.
+
+
+
+DESIGN PATTERN
+
+model: Board, SlidingTileBoard, TicTacToeBoard, SudokuBoard
+Super class Board which form each games board, SlidingTileBoard, TicTacToeBoard and SudokuBoard inheritance super.
+
+control: Complexitycomtroller(Control the complexity page to set the difficult), SlidingTilesBoardManager(SlidingTilesBoardManager control the slidingtileboard, which contains functions), SlidingTileMovementController(Control the movement in sliding tile),
+SudokuBoardmanager(SudokuBoardManager control the sudokuboard, which contains functions), TicTactoeBoardManager(TicTacToeBoardManager control the tictactoeboard, which contains functions)
+
+
+view:ComplexityActicity(View of complexity selection), GameSlectionActivity(View of game selection), ScoreboardActivity(View of the score board), signUpActivity(View of sign up), 
+SlidingTilesGameAcitvity(View of slidingtiles game), SlidingTilesGestureDectectGridView, SlidingTilesStartingActivity(View of slidingtiles welcome game), SudokuGameActivity(View of sudoku game), SudokuGameDifficultyActivity(View of sudoku game complexity selection), SudokuInstructionActivity(View of sudoku game instruction), SudokuInitialActivity(View of soduku initial game), TicTacToeComplexityActivity(View of tictactoe complexity selection), TicTacToeGameActivity(View of TicTacToe 	game)
+
+
+SCOREBOARD
+Our Scores are stored in the database, the table Score. Each boardmanager has a variable Score. When the game is solved, the boardmanager will set its Score by taking account the int score in the board. 
+Then ScoreDao will do the upload part. We use ScoreBoardAdaptor to display our ScoreBoard. In ScoreBoard Activity, it has a list of highest scores by calling query() in ScoreDao. Then the list will be the input of the Adaptor and displayed on the xml file. 
+
+
+
+
+

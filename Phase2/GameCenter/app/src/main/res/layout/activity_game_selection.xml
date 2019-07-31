@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameSelectionActivity">
+
+    <Button
+        android:id="@+id/Logout"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/background_light"
+        android:text="Logout"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/Game1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/slidingtiles_logo"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/Game2"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:background="@drawable/tictactoe_logo" />
+
+            <Button
+                android:id="@+id/Game3"
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:background="@drawable/soduku"
+                tools:layout_editor_absoluteX="124dp"
+                tools:layout_editor_absoluteY="258dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

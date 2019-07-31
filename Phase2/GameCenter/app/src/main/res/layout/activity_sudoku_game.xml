@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="360dp"
+        android:layout_height="377dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCheckBoard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer">
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/cellGroupFragment"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="0" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment2"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment3"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="2" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/cellGroupFragment4"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="3" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment5"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="4" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment6"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="5" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/cellGroupFragment7"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="6" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment8"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="7" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment9"
+                android:name="a207project.fall18.GameCenter.TileGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="120dp"
+                android:layout_weight="1"
+                android:tag="8" />
+        </TableRow>
+
+    </TableLayout>
+
+<Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:onClick="onGoBackButtonClicked"
+    android:text="@string/go_back_button"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.965"
+    android:layout_marginStart="16dp" />
+
+    <Button
+        android:id="@+id/buttonShowInstructions"
+        android:layout_width="123dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="244dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:onClick="onShowInstructionsButtonClicked"
+        android:text="@string/show_instructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
+
+    <Button
+        android:id="@+id/buttonCheckBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="104dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+
+        android:onClick="onCheckBoardButtonClicked"
+        android:text="@string/check_board"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.965" />
+
+    <a207project.fall18.GameCenter.TimerTextView
+        android:id="@+id/timer"
+        android:layout_width="207dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

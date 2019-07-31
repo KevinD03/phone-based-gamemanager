@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">SlidingTiles</string>
+
+    <string-array name="difficulty">
+        <item>3 * 3</item>item>
+        <item>4 * 4</item>item>
+        <item>5 * 5</item>item>
+    </string-array>
+    <string name="title_activity_stone_henge_main">StoneHengeMainActivity</string>
+    string-array>
+
+    <string name="sudoku">Sudoku</string>
+    <string name="norwegian_description">A picture of a norwegian flag</string>
+    <string name="british_description">A picture of a british flag</string>
+
+    <string name="new_game">Start New Game</string>
+    <string name="add_new_board">Add new board</string>
+    <string name="continue_new_board">Continue</string>
+    <string name="successful_new_board">New board saved</string>
+    <string name="fail_new_board">Failed to save new board</string>
+    <string name="show_instructions">Show instructions</string>
+    <string name="choose_language">Choose language:</string>
+
+    <string name="instructions">Instructions</string>
+    <string name="instructions_1">When you click the sudoku logo, it will direct go to a welcome page which includes start new
+game button, load game button. Clicking New game button will intend you to our sudoku complexity game
+page, clicking load games button if you have played our tictactoe game before, we will autosave your
+game state, clicking scoreboard button, you will go to the scoreboard page which will show your
+score and your rank of all players.</string>
+    <string name="instructions_2">You can get 3 levels of our game, which is easy, intermediate
+and difficult. The different between 3 level is based on the level of sudoku board which is on the
+Internet. The rule of how to win this game is to completer all row, col, and small square board, which
+is in any single row, col and board have different 1-9 numbers. The beginning score is always 100,
+one click will leads score minus 1. Higher score you get, higher rank you get. In game page, if you
+think yourself finished the board, you can click the check board button to check whether you win or
+not.</string>
+    <string name="instructions_3">If you think you get something wrong, you can change your number by directly clicking on its
+small tile, it will also pop a number select table and a replace button! If you want to undo the
+number, Just click it.</string>
+    <string name="go_back_button">Go back</string>
+
+    <string name="choose_difficulty">Choose difficulty:</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_normal">Normal</string>
+    <string name="difficulty_hard">Hard</string>
+    <string name="start_game">Start Game</string>
+    <string name="choose_number">Choose number</string>
+    <string name="choose_a_number">Choose number to place:</string>
+    <string name="place_number">Place number</string>
+    <string name="piece_unsure">Mark piece as unsure</string>
+    <string name="remove_piece">Remove piece</string>
+    <string name="start_piece_error">Can not change start piece</string>
+    <string name="check_board">Check board</string>
+    <string name="board_correct">Board is correct</string>
+    <string name="board_incorrect">Board is not correct</string>
+
+
+</resources>

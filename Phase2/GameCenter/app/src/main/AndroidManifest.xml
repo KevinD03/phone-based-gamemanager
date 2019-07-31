@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="a207project.fall18.GameCenter">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".MyApplication"
+        
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SlidingTilesGameActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SlidingTilesStartingActivity" />
+        <activity android:name=".GameSelectionActivity" />
+        <activity android:name=".ComplexityActivity" />
+        <activity android:name=".ScoreboardActivity" />
+        <activity android:name=".TicTacToeGameActivity" />
+
+        <activity android:name=".SudokuGameActivity" />
+        <activity android:name=".SudokuInstructionsActivity" />
+        <activity android:name=".SudokuInitialActivity" />
+        <activity android:name=".SudokuNewBoardActivity"/>
+
+    </application>
+
+</manifest>
